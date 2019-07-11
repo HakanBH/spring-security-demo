@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<form th:action="@{/login}" method="post">
+    <label> Username: <input type="text" name="username"></label>
+    <label> Password: <input type="password" name="password"></label>
+    <input type="submit" value="Login">
+</form>
+
+<div th:if="${param.error}" style="color: red;">
+    Invalid credentials!
+</div>
+</body>
+</html>
